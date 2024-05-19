@@ -1,4 +1,4 @@
-# A Monorepo Example
+# A Monorepo
 
 This monorepo setup features two different [Next.js](https://nextjs.org/) applications located in the [apps](apps) folder:
 
