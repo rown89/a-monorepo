@@ -1,40 +1,38 @@
-# a-monorepo
+# A Monorepo Example
 
-This monorepo orchestration contains 2 different [NextJs](https://nextjs.org/) apps under the [/apps](a-monorepo/blob/main/apps) folder.
+This monorepo setup features two different [Next.js](https://nextjs.org/) applications located in the [apps](apps) folder:
 
-- storefront
-- backoffice
+- **storefront**
+- **backoffice**
 
-The root `package.json` contains the most high level dependencies, like nextjs for apps.
+At the root level, we have the [packages](packages) folder, which includes the following packages:
 
-At the root level we have the [/packages](a-monorepo/blob/main/packages) folder, with the following 3 packages:
-- infrastructure
-This package could contains common service dependencies consumed trought your projects like:
-databases, cms, configs files, clients, etc...
-As an example i've already defined [supabase](https://supabase.com/) clients.
+## Infrastructure Package
+This package contains common service dependencies used across your projects, such as databases, CMS, config files, and clients. An example provided is the [Supabase](https://supabase.com/) clients.
 
-- ui
-This package contain UI's relative packages, shared components and tailwind configurations.
-Some dependencies are already defined in the UI `package.json`:
-- [storybook](https://storybook.js.org/)
-- [tailwind](https://tailwindcss.com/)
-- [class-variance-authority](https://cva.style/docs)
-- [daisyui](https://daisyui.com/)
+## UI Package
+This package includes UI-related packages, shared components, and Tailwind CSS configurations. The UI `package.json` already includes several dependencies:
+- [Storybook](https://storybook.js.org/): A tool for developing UI components in isolation.
+- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework.
+- [Class Variance Authority](https://cva.style/docs): A utility for managing component styles.
+- [DaisyUI](https://daisyui.com/): A set of Tailwind CSS components.
 
-- website
-This package could contains common utilities like hooks and utility functions.
+## Website Package
+This package contains common utilities such as hooks and utility functions.
 
-## Prettier, EsLint, tsconfig
-Root level configs are extended inside other packages, like:
-- prettier.config.mjs
-- eslint-config.mjs
-- tsconfig.json
+## Configuration
+Root-level configurations are extended into other packages, including:
+- `prettier.config.mjs`: Prettier configuration.
+- `eslint-config.mjs`: ESLint configuration.
+- `tsconfig.json`: TypeScript configuration.
 
-## commits
-[Husky](https://typicode.github.io/husky/) is already configurated in conjunction with [commitlint](https://github.com/conventional-changelog/commitlint) a conventional commits library.
+## Commits
+[Husky](https://typicode.github.io/husky/) is set up to manage Git hooks, and [commitlint](https://github.com/conventional-changelog/commitlint) is configured to enforce conventional commit messages.
 
 ## Docker
-We have a root `compose.yml` file with 2 containers for storefront and backoffice apps.
+The root `compose.yml` file defines Docker containers for both the storefront and backoffice applications.
 
 ## Turbopack
-This monorepo use [turbopack](https://turbo.build/pack).
+This monorepo uses [Turbopack](https://turbo.build/pack) for bundling and build orchestration.
+
+This structure provides a scalable and maintainable foundation for developing and deploying multiple applications and packages within a single repository.
