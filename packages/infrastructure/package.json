@@ -1,0 +1,13 @@
+{
+  "name": "@nomadgem/infrastructure",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    "clients": "./clients"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.3.0",
+    "@supabase/supabase-js": "^2.43.2"
+  },
+  "devDependencies": {}
+}

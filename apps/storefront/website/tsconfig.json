@@ -1,0 +1,23 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "next.config.mjs",
+    ".next/types/**/*.ts",
+    "**/*.js",
+    "**/*.ts",
+    "**/*.tsx",
+    "tailwind.config.ts",
+    "postcss.config.mjs",
+    "eslint.config.mjs",
+    "prettier.config.mjs"
+  ],
+  "exclude": ["node_modules"]
+}

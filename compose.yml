@@ -1,0 +1,27 @@
+version: '3.9'
+name: nomadgem
+services:
+  storefront:
+    container_name: storefront
+    build:
+      context: .
+      dockerfile: ./apps/storefront/website/Dockerfile
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+
+  backoffice:
+    container_name: backoffice
+    build:
+      context: .
+      dockerfile: ./apps/backoffice/website/Dockerfile
+    restart: unless-stopped
+    ports:
+      - 3001:3001
+
+# Define a network, which allows containers to communicate
+# with each other, by using their container name as a hostname
+networks:
+  app_network:
+    external: true
+    name: nomadgem_network

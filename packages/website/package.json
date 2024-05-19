@@ -1,0 +1,17 @@
+{
+  "name": "@nomadgem/website",
+  "version": "1.0.0",
+  "private": true,
+  "sideEffects": false,
+  "export": {
+    "./hooks": "./src/hooks/index.ts",
+    "./utils": "./src/utils/index.ts"
+  },
+  "dependencies": {
+    "@nomadgem/ui": "*",
+    "@nomadgem/infrastructure": "*",
+    "next-translate-plugin": "^2.6.2",
+    "next-translate": "^2.6.2"
+  },
+  "devDependencies": {}
+}

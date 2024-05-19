@@ -1,0 +1,25 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+    /* "paths": {
+      "@backoffice/*": ["./src/*"]
+    } */
+  },
+  "include": [
+    "next-env.d.ts",
+    "next.config.mjs",
+    ".next/types/**/*.ts",
+    "**/*.js",
+    "**/*.ts",
+    "**/*.tsx",
+    "tailwind.config.ts",
+    "postcss.config.mjs",
+    "eslint.config.mjs"
+  ],
+  "exclude": ["node_modules"]
+}
