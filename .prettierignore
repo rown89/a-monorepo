@@ -1,5 +1,6 @@
 .vscode
 .yarn
+node_modules
 .next
 out
 *.md

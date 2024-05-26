@@ -8,6 +8,5 @@
   "dependencies": {
     "@supabase/ssr": "^0.3.0",
     "@supabase/supabase-js": "^2.43.2"
-  },
-  "devDependencies": {}
+  }
 }

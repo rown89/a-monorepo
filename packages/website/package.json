@@ -8,10 +8,9 @@
     "./utils": "./src/utils/index.ts"
   },
   "dependencies": {
-    "@nomadgem/ui": "*",
     "@nomadgem/infrastructure": "*",
-    "next-translate-plugin": "^2.6.2",
-    "next-translate": "^2.6.2"
-  },
-  "devDependencies": {}
+    "@nomadgem/ui": "*",
+    "next-translate": "^2.6.2",
+    "next-translate-plugin": "^2.6.2"
+  }
 }

@@ -7,9 +7,13 @@ RUN apk add --no-cache libc6-compat && apk update
 # Builder stage
 FROM base AS builder
 WORKDIR /app
-RUN yarn global add turbo
+RUN npm -g i turbo
 COPY . .
 RUN turbo prune @nomadgem/storefront-website --docker
+
+# Verify the output of turbo prune
+RUN ls -la /app/out
+
 
 # Installer stage to handle dependencies
 FROM base AS installer
@@ -21,13 +25,14 @@ COPY .gitignore .gitignore
 
 # Copy necessary files from builder and install dependencies
 COPY --from=builder /app/out/json/ .
-COPY --from=builder /app/out/yarn.lock ./yarn.lock
-RUN yarn install --frozen-lockfile
+COPY --from=builder /app/out/package-lock.json ./package-lock.json
+
+RUN npm install
 
 # Build the project
 COPY --from=builder /app/out/full/ .
 COPY turbo.json turbo.json
-RUN yarn turbo build:next --filter=@nomadgem/storefront-website
+RUN npx turbo build:next --filter=@nomadgem/storefront-website
 
 # Runner stage for production
 FROM base AS runner

@@ -10,9 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nomadgem/infrastructure": "*",
     "@nomadgem/ui": "*",
-    "@nomadgem/website": "*",
-    "@nomadgem/infrastructure": "*"
-  },
-  "devDependencies": {}
+    "@nomadgem/website": "*"
+  }
 }

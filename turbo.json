@@ -15,5 +15,5 @@
 			"dependsOn": ["build", "lint"]
 		}
 	},
-	"globalDependencies": ["package.json", "yarn.lock"]
+	"globalDependencies": ["package.json", "package-lock.json"]
 }
