@@ -3,11 +3,11 @@
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
-		"storefront-web-dev": "npm --workspace=@nomadgem/storefront-website dev",
-		"storefront-web-build": "npm --workspace=@nomadgem/storefront-website build",
-		"backoffice-web-dev": "npm --workspace=@nomadgem/backoffice-website dev",
-		"backoffice-web-build": "npm --workspace=@nomadgem/backoffice-website build",
-		"storybook": "npm --workspace=@nomadgem/ui storybook",
+		"storefront-web-dev": "npm run --workspace=@nomadgem/storefront-website dev",
+		"storefront-web-build": "npm run --workspace=@nomadgem/storefront-website build",
+		"backoffice-web-dev": "npm run --workspace=@nomadgem/backoffice-website dev",
+		"backoffice-web-build": "npm run --workspace=@nomadgem/backoffice-website build",
+		"storybook": "npm run --workspace=@nomadgem/ui storybook",
 		"postinstall": "husky"
 	},
 	"packageManager": "npm@10.8.0",
