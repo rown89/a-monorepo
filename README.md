@@ -15,7 +15,6 @@ This package includes UI-related packages, shared components, and Tailwind CSS c
 - [Storybook](https://storybook.js.org/): A tool for developing UI components in isolation.
 - [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework.
 - [Class Variance Authority](https://cva.style/docs): A utility for managing component styles.
-- [DaisyUI](https://daisyui.com/): A set of Tailwind CSS components.
 
 ## Website Package
 This package contains common utilities such as hooks and utility functions.
